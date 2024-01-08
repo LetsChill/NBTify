@@ -1,8 +1,7 @@
-package io.letschill.nbtify.fabric.callback;
+package io.letschill.nbtify.utils;
 
 import com.mojang.blaze3d.platform.InputConstants;
 import io.letschill.nbtify.screen.NBTScreen;
-import io.letschill.nbtify.utils.ToolTipUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.toasts.SystemToast;
 import net.minecraft.client.gui.screens.Screen;
@@ -15,7 +14,7 @@ import java.util.Objects;
 
 import static io.letschill.nbtify.utils.ToolTipUtils.getGuide;
 
-public class NBTCallBack {
+public class TooltipModifier {
 
     private static boolean flag = false;
 

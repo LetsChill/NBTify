@@ -1,22 +1,15 @@
 package io.letschill.nbtify.fabric;
 
-import io.letschill.nbtify.fabric.callback.NBTCallBack;
-import net.fabricmc.api.ModInitializer;
+import io.letschill.nbtify.utils.TooltipModifier;
+import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
-public class NBTIFY implements ModInitializer {
-
-    private final Logger logger = LogManager.getLogger(io.letschill.nbtify.NBTIFY.MOD_ID);
+public class NBTIFY implements ClientModInitializer {
 
     @Override
-    public void onInitialize() {
-
-        ItemTooltipCallback.EVENT.register(NBTCallBack::getTooltip);
-
+    public void onInitializeClient() {
         io.letschill.nbtify.NBTIFY.init();
 
-        logger.info("Initialized");
+        ItemTooltipCallback.EVENT.register(TooltipModifier::getTooltip);
     }
 }

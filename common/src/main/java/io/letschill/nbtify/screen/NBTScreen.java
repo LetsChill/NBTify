@@ -59,6 +59,7 @@ public class NBTScreen extends Screen {
     public void render(GuiGraphics guiGraphics, int i, int j, float f) {
         guiGraphics.fill(5, 20, this.width - 5, this.height - 10, -16777216);
         renderBackground(guiGraphics);
+
         super.render(guiGraphics, i, j, f);
 
         int k=0;
